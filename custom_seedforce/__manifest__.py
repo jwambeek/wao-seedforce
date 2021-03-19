@@ -8,7 +8,7 @@
         'account_accountant',
         'purchase',
         'account_consolidation',
-        'website_sale',
+        'website',
         'sale_management',
         'product',
     ],    
