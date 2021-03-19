@@ -8,7 +8,47 @@
             <field name="sequence" type="int">22</field>
         </record>
 
+<template id="sale_order_view" name="Harvest Declaration">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="container">
+                    <div class="col-md-12">
+                        <form action="/harvest_webform/submit" method="POST">
+                        <!--url/controller to called on the form action.-->
+                            <div class="form-group">
+                                <label for="name">Opening Balance</label>
+                                <input type="number" class="form-control" name="x_studio_opening_balance" id="x_studio_opening_balance" required="true" />
+                          <!--label and id of the fields to be created in the form.These fields should be present in the model for the entry of the data into the database.-->         
+                            </div>
+                            <!--<div class="form-group">
+                                <label for="email">Email address:</label>
+                                <input type="email" class="form-control" name="email" id="email" required="true" />
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Phone:</label>
+                                <input type="text" class="form-control" name="phone" id="phone" required="true" />
+                            </div>-->
+                            <button type="submit" class="btn btn-primary">Create</button>
+                        </form>
+                    </div>
+                </div>
+              </div>
+          </t>
+</template>
 
-        
+<template id="harvest_success" name="Harvest Form Successfully Submitted">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="alert alert-success">
+                            Order created successfully.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template
+
     </data>
 </odoo>
