@@ -13,7 +13,7 @@
             <div id="wrap">
                 <div class="container">
                     <div class="col-md-12">
-                        <form action="/harvest_webform" method="POST">
+                        <form action="/harvest_webform/submit" method="POST">
                         <!--url/controller to called on the form action.-->
                             <div class="form-group">
                                 <label for="name">Opening Balance</label>
