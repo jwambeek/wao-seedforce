@@ -14,7 +14,7 @@ class WebsiteSale(http.Controller):
         #return request.render("custom_seedforce.harvest_success", {})
 
         partner = request.env['sale.order'].create({
-            'x_studio_opening_balance': post.get('x_studio_opening_balance')
+            'partner_id': post.get('partner_id')
 
         })
         vals = {

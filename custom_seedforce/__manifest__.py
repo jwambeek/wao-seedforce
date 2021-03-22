@@ -1,13 +1,12 @@
 {
     'name' : 'SeedForce',
-    'version': '1.3',
+    'version': '1.4',
     'Summary': '',
     'description': 'Pass the field value into sale order',
     'license': 'LGPL-3',
     'depends': [
         'account_accountant',
         'purchase',
-        'account_consolidation',
         'website',
         'sale_management',
         'product',
