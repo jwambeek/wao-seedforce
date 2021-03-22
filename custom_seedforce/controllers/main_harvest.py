@@ -21,4 +21,4 @@ class WebsiteSale(http.Controller):
             'partner': partner,
         }
 
-        return request.render("custom_seedforce.harvest_success", vals)
+        #return request.render("custom_seedforce.harvest_success", vals)
