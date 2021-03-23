@@ -13,11 +13,12 @@
             <div id="wrap">
                 <div class="container">
                     <div class="col-md-12">
-                        <form action="/harvest_webform/submit">
+                        <form role= "form" action="/harvest_webform/submit" method="POST">
                         <!--url/controller to called on the form action.-->
+                        <input type="hidden" name="csrf_token" t-attr-value="request.csrf_token()"/>
                             <div class="form-group">
-                                <label for="name">Opening Balance</label>
-                                <input type="number" class="form-control" name="partner_id" id="partner_id" required="true" />
+                                <label for="partner_id" class="form-control">Customer</label>
+                                <input type="text" class="form-control" name="partner_id" t-attr-value= "partner_id" id="partner_id" required="true" />
                           <!--label and id of the fields to be created in the form.These fields should be present in the model for the entry of the data into the database.-->         
                             </div>
                             <!--<div class="form-group">
@@ -36,7 +37,7 @@
           </t>
 </template>
 
-<template id="harvest_success" name="Harvest Form Successfully Submitted">
+<!--<template id="harvest_success" name="Harvest Form Successfully Submitted">
         <t t-call="website.layout">
             <div id="wrap">
                 <div class="container">
@@ -48,7 +49,30 @@
                 </div>
             </div>
         </t>
-    </template>
+    </template>-->
+
+<record id= "harvest_success" model= "website.page">
+            <field name="name">Thanks</field>
+            <field name="type">qweb</field>
+            <field name="url">/harvest-thank-you</field>
+            <field name="key">custom_seedforce.harvest_success</field>
+        <field name="arch" type="xml">
+        <t name="Thanks" t-name="custom_seedforce.harvest_success">
+   
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="alert alert-success">
+                            Order created successfully.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t> 
+        </t> 
+        </field>
+</record>  
 
     </data>
 </odoo>

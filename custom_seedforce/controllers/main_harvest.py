@@ -5,8 +5,8 @@ class WebsiteSale(http.Controller):
 
     @http.route('/harvest_webform', type='http', auth="public", website=True)
     def harvest_webform(self, **post):
-        return "Thanks for submission"
-        #return http.render('custom_seedforce.sale_order_view', {})
+        #return "Thanks for submission"
+        return http.render('custom_seedforce.sale_order_view', {})
 
 
     @http.route('/harvest_webform/submit', type='http', auth="public", website=True)
