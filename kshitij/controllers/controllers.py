@@ -9,7 +9,9 @@ class SubmissionTest(WebsiteForm):
     @http.route('/website_form', type='http', auth="public", methods=['POST'], multilang=False)
     def website_form_empty(self, **kwargs):
         print(kwargs)
+        return 200
 
     @http.route('/website_form/<string:model_name>', type='http', auth="public", methods=['POST'], website=True, csrf=False)
     def website_form(self, model_name, **kwargs):
         print(kwargs)
+        return 200
