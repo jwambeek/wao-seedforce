@@ -16,7 +16,7 @@
                     <h3>Harvest Declaration</h3>
                         <form role= "form" action="/harvest_webform/submit" method="POST">
                         <!--url/controller to called on the form action.-->
-                        <input type="hidden" name="csrf_token" t-attr-value="request.csrf_token()"/>
+                        <!--<input type="hidden" name="csrf_token" t-attr-value="request.csrf_token()"/>-->
                             <div class="form-group">
                                 <label for="partner_id" class="form-control">Customer</label>
                                 <input type="text" class="form-control" name="partner_id" t-attr-value= "partner_id" id="partner_id" required="true" />
