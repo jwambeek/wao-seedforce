@@ -18,8 +18,8 @@ class WebsiteSale(http.Controller):
         #     'partner_id': kw.get('partner_id')
 
         # })
-        vals = {
-             'partner_id': kw.get('partner_id')
-        }
-        return request.render("custom_seedforce.harvest_success", vals)
+        # vals = {
+        #      'partner_id': kw.get('partner_id')
+        # }
+        return request.render("custom_seedforce.harvest_success", {})
         #return request.render("custom_seedforce.harvest_success", vals)
