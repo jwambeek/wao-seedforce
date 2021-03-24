@@ -15,10 +15,10 @@ class PartnerForm(http.Controller):
     @http.route(['/customer/form/submit'], type='http', auth="public", website=True)
     #next controller with url for submitting data from the form#
     def customer_form_submit(self, **post):
-        partner = request.env['res.partner'].create({
+        partner = request.env['sale.order'].create({
             'name': post.get('name'),
-            'email': post.get('email'),
-            'phone': post.get('phone')
+            #'email': post.get('email'),
+            #'phone': post.get('phone')
         })
         vals = {
             'partner': partner,
