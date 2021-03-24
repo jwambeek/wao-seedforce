@@ -10,8 +10,8 @@ class PartnerForm(http.Controller):
     def partner_form(self, **post):
     #create method
     #this will load the form webpage
-        return request.render("create_partner_by_website.tmp_customer_form", {})
-        
+        return request.render("custom_seedforce.tmp_customer_form", {})
+
     @http.route(['/customer/form/submit'], type='http', auth="public", website=True)
     #next controller with url for submitting data from the form#
     def customer_form_submit(self, **post):
@@ -24,5 +24,5 @@ class PartnerForm(http.Controller):
             'partner': partner,
         }
         #inherited the model to pass the values to the model from the form#
-        return request.render("create_partner_by_website.tmp_customer_form_success", vals)
+        return request.render("custom_seedforce.tmp_customer_form_success", vals)
      
