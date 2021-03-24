@@ -4,7 +4,7 @@ from odoo import http
 from odoo.http import request
 
 class Hospital(http.Controller):
-    @http.route('/website/',type="http",auth="public",website=True)
+    @http.route('/website_form',type="http",auth="public",website=True)
     def patient_web(self,**kwargs):
         print(kwargs)
 
