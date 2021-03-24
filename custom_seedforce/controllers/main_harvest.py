@@ -9,17 +9,17 @@ class WebsiteSale(http.Controller):
         return http.request.render('custom_seedforce.sale_order_view', {})
 
 
-    # @http.route('/harvest_webform/submit', type='http', auth="public", website=True)
-    # def sale_order(self, **post):
-    #     #request.env['sale.order'].sudo().create(kw)
-    #     #return request.render("custom_seedforce.harvest_success", {})
+    @http.route('/harvest_webform/submit', type='http', auth="public", website=True)
+    def sale_order(self, **post):
+        #request.env['sale.order'].sudo().create(kw)
+        #return request.render("custom_seedforce.harvest_success", {})
 
-    #     partner = request.env['sale.order'].create({
-    #         'partner_id': post.get('partner_id')
+        partner = request.env['res.partner'].create({
+            'partner_id': post.get('partner_id')
 
-    #     })
-    #     vals = {
-    #         'partner': partner,
-    #     }
+        })
+        vals = {
+            'partner': partner,
+        }
 
         #return request.render("custom_seedforce.harvest_success", vals)

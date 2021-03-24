@@ -13,6 +13,7 @@
             <div id="wrap">
                 <div class="container">
                     <div class="col-md-12">
+                    <h3>Harvest Declaration</h3>
                         <form role= "form" action="/harvest_webform/submit" method="POST">
                         <!--url/controller to called on the form action.-->
                         <input type="hidden" name="csrf_token" t-attr-value="request.csrf_token()"/>
