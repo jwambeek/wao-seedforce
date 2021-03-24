@@ -14,7 +14,7 @@
     ],    
      'data': [
         'views/website_form.xml',
-        'views/test_form.xml',
+        #'views/test_form.xml',
         'views/test_record_id.xml'
 
     ],
