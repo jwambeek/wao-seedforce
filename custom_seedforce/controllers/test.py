@@ -16,7 +16,7 @@ class PartnerForm(http.Controller):
     #next controller with url for submitting data from the form#
     def customer_form_submit(self, **post):
         partner = request.env['sale.order'].create({
-            'name': post.get('partner_id'),
+            'name': post.get('partner_id.name'),
             #'email': post.get('email'),
             #'phone': post.get('phone')
         })
