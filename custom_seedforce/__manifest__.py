@@ -13,7 +13,8 @@
     ],    
      'data': [
         'views/website_form.xml',
-        'views/test_form.xml'
+        'views/test_form.xml',
+        'views/test_recod_id.xml'
 
     ],
     'installable': True,
