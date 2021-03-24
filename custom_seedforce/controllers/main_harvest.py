@@ -10,16 +10,16 @@ class WebsiteSale(http.Controller):
 
 
     @http.route('/harvest_webform/submit', type='http', auth="public", website=True)
-    def sale_order(self, **kw):
+    def sale_order(self, **post):
         #request.env['res.partner'].sudo().create(kw)
         #return request.render("custom_seedforce.harvest_success", {})
 
         partner = request.env['res.partner'].create({
-            'name': kw.get('name')
+            'name': post.get('name')
 
         })
-        # vals = {
-        #      'partner_id': kw.get('partner_id')
-        # }
-        return request.render("custom_seedforce.harvest_success", partner)
-        #return request.render("custom_seedforce.harvest_success", vals)
+        vals = {
+             'partner': partner
+        }
+        #return request.render("custom_seedforce.harvest_success", {})
+        return request.render("custom_seedforce.harvest_success", vals)
