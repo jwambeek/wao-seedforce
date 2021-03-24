@@ -17,8 +17,8 @@
                         <form action="/customer/form/submit">
 
                             <div class="form-group">
-                                <label for="partner_shipping_id">Name:</label>
-                                <input type="text" class="form-control" name="partner_shipping_id" id="partner_shipping_id" required="true" />
+                                <label for="partner_id">Name:</label>
+                                <input type="text" class="form-control" name="partner_id" id="partner_id" required="true" />
           
                             </div>
                             <!--<div class="form-group">
