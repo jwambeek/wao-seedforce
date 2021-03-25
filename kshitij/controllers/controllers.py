@@ -9,13 +9,13 @@ def ksh(t):
     print("Khs")
 
 class SubmissionTest(WebsiteForm):
-    @http.route('/website_form', type='http', auth="public", methods=['POST'], multilang=False)
-    def website_form_empty(self, **kwargs):
-        print(kwargs)
-        return ""
-
-    # @http.route('/website_form/<string:model_name>', type='http', auth="public", methods=['POST'], website=True, csrf=False)
-    # def website_form(self, model_name, **kwargs):
+    # @http.route('/website_form', type='http', auth="public", methods=['POST'], multilang=False)
+    # def website_form_empty(self, **kwargs):
     #     print(kwargs)
-    #     # request.env[sale.order].sudo().create()
-    #     return json.dumps({'id': 2000})
+    #     return ""
+
+    @http.route('/website_form/<string:model_name>', type='http', auth="public", methods=['POST'], website=True, csrf=False)
+    def website_form(self, model_name, **kwargs):
+        print(kwargs)
+        # request.env[sale.order].sudo().create()
+        return ""
