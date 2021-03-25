@@ -39,5 +39,6 @@ class WebsiteSaleTest(WebsiteSale):
         _logger.debug(res_super)
         _logger.info("--------------------------------------")
         _logger.info(self,post)
-        return res_super
         _logger.info("================================")
+        return res_super
+
