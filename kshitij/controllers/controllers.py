@@ -25,15 +25,17 @@ class SubmissionTest(WebsiteForm):
         # sale.order ki sari required values chahiyae
         return ""
 
-    @http.route(['/shop/cart'], type='http', auth="public", methods=['POST'], website=True)
-    def cart_hook(self, product_id, add_qty=1, set_qty=0, **kw):
-        res_super=super(SubmissionTest, self).cart(**kw)
-        _logger.info("================================")
-        _logger.debug(self,kw)
+    @http.route(['/shop/cart/update'], type='http', auth="public", methods=['POST'], website=True)
+    def cart_update(self, product_id, add_qty=1, set_qty=0, **kw):
+        _logger.debug(kw)
+        _logger.info(kw)
+
+    @http.route(['/shop/cart'], type='http', auth="public", website=True, sitemap=False)
+    def cart_hook(self,**post):
+        _logger.info("=================================================")
+        res_super=super(SubmissionTest, self).cart(post)
+        _logger.debug(self,post)
+        _logger.info("--------------------------------------")
+        _logger.info(self,post)
         return res_super
-
-
-
-    # @http.route(['/shop/cart'], type='http', auth="public", website=True, sitemap=False)
-    # def cart_hook:
-    # overriding the /shop/cart
+        _logger.info("================================")
