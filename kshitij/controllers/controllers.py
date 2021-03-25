@@ -17,6 +17,6 @@ class SubmissionTest(WebsiteForm):
     @http.route('/website_form/<string:model_name>', type='http', auth="public", methods=['POST'], website=True, csrf=False)
     def website_form(self, model_name, **kwargs):
         print(kwargs)
-        _logger.info("kshitij ",kwargs)
-        _logger.debug("kshitij ",kwargs)
+        _logger.info("kshitij ",kwargs,self)
+        _logger.debug("kshitij ",kwargs,self)
         return ""
