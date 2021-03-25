@@ -26,7 +26,7 @@ class WebsiteSaleTest(WebsiteSale):
     @http.route()
     def checkout(self, **post):
         sup=super(WebsiteSaleTest,self).checkout(post)
-        _logger.log(10,"***********",post,sup)
+        _logger.log(10,"*************",post,sup)
         return sup
 
     @http.route()
