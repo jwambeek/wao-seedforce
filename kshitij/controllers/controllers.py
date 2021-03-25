@@ -1,9 +1,5 @@
-# -*- coding: utf-8 -*-
-# from odoo import http
 from odoo import http
-from odoo import fields
 from odoo.http import request
-import json
 from odoo.addons.website_form.controllers.main import WebsiteForm
 from odoo.addons.website_sale.controllers.main import WebsiteSale
 import logging
@@ -23,22 +19,23 @@ class WebsiteFormTest(WebsiteForm):
 
         }
         request.env['sale.order'].sudo().create(data)
-        # sale.order ki sari required values chahiyae
+        # sale.order ki sari required values
         return ""
 
 class WebsiteSaleTest(WebsiteSale):
-    @http.route(['/shop/cart/update'], type='http', auth="public", methods=['POST'], website=True)
-    def cart_update(self, product_id, add_qty=1, set_qty=0, **kw):
-        _logger.debug(kw)
-        _logger.info(kw)
+    @http.route()
+    def checkout(self, **post):
+        sup=super(WebsiteSaleTest,self).checkout(post)
+        _logger.log(10,"***********",post,sup)
+        return sup
 
     @http.route()
-    def cart(self,**post):
+    def cart(self):
         _logger.info("=================================================")
-        res_super=super(WebsiteSaleTest, self).cart(post)
+        res_super=super(WebsiteSaleTest, self).cart()
         _logger.debug(res_super)
         _logger.info("--------------------------------------")
-        _logger.info(self,post)
+        _logger.log(self)
         _logger.info("================================")
         return res_super
 
