@@ -4,9 +4,9 @@ from odoo import http
 from odoo.http import request
 import json
 from odoo.addons.website_form.controllers.main import WebsiteForm
+import logging
 
-def ksh(t):
-    print("Khs")
+_logger  = logging.getLogger(__name__)
 
 class SubmissionTest(WebsiteForm):
     # @http.route('/website_form', type='http', auth="public", methods=['POST'], multilang=False)
@@ -17,5 +17,6 @@ class SubmissionTest(WebsiteForm):
     @http.route('/website_form/<string:model_name>', type='http', auth="public", methods=['POST'], website=True, csrf=False)
     def website_form(self, model_name, **kwargs):
         print(kwargs)
-        # request.env[sale.order].sudo().create()
+        _logger.info("kshitij ",kwargs)
+        _logger.debug("kshitij ",kwargs)
         return ""
