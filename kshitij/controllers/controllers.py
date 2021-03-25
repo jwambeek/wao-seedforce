@@ -27,8 +27,9 @@ class SubmissionTest(WebsiteForm):
 
     @http.route(['/shop/cart'], type='http', auth="public", methods=['POST'], website=True)
     def cart_hook(self, product_id, add_qty=1, set_qty=0, **kw):
-        res_super=super(SubmissionTest, self).payment_confirmation(**kw)
-        _logger.info(kw)
+        res_super=super(SubmissionTest, self).cart(**kw)
+        _logger.info("================================")
+        _logger.debug(self,kw)
         return res_super
 
 
