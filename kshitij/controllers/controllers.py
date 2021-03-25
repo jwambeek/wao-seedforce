@@ -27,6 +27,7 @@ class WebsiteSaleTest(WebsiteSale):
     def checkout(self, **post):
         sup=super(WebsiteSaleTest,self).checkout(post)
         _logger.info("==========")
+        _logger.debug("{0} == {1}",sup,post)
         _logger.debug(sup)
         _logger.debug(post)
         _logger.info("==============================")
@@ -34,11 +35,6 @@ class WebsiteSaleTest(WebsiteSale):
 
     @http.route()
     def cart(self):
-        _logger.info("=================================================")
         res_super=super(WebsiteSaleTest, self).cart()
-        _logger.debug(res_super)
-        _logger.info("--------------------------------------")
-        _logger.log(self)
-        _logger.info("================================")
         return res_super
 
