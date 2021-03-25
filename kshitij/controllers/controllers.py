@@ -1,10 +1,9 @@
 from odoo import http
-from odoo.http import request
 from odoo.addons.website_form.controllers.main import WebsiteForm
 from odoo.addons.website_sale.controllers.main import WebsiteSale
 import logging
 
-_logger  = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 class WebsiteFormTest(WebsiteForm):
     # @http.route('/website_form', type='http', auth="public", methods=['POST'], multilang=False)
@@ -14,7 +13,7 @@ class WebsiteFormTest(WebsiteForm):
 
     @http.route('/website_form/<string:model_name>', type='http', auth="public", methods=['POST'], website=True, csrf=False)
     def website_form(self, model_name, **kwargs):
-        super_website = super(WebsiteFormTest,self).website_form("sale.order",**kwargs)
+        super_website = super(WebsiteFormTest,self).website_form("res.partner",**kwargs)
         _logger.info(kwargs)
         return super_website
 
@@ -32,4 +31,3 @@ class WebsiteSaleTest(WebsiteSale):
     def cart(self):
         res_super=super(WebsiteSaleTest, self).cart()
         return res_super
-
