@@ -19,5 +19,5 @@ class SubmissionTest(WebsiteForm):
         data = {
             "x_studio_opening_balance_so":1000
         }
-        request.ev['sale.order'].sudo().create(data)
+        request.env['sale.order'].sudo().create(data)
         return ""
