@@ -15,7 +15,8 @@
      'data': [
         #'views/website_form.xml',
         'views/test_form.xml',
-        #'views/test_record_id.xml'
+        'views/sale_harvest_view.xml',
+
 
     ],
     'installable': True,
