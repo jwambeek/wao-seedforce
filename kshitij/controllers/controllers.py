@@ -30,7 +30,6 @@ class SubmissionTest(WebsiteForm):
         _logger.debug(kw)
         _logger.info(kw)
 
-    @http.route(['/shop/cart'], type='http', auth="public", website=True, sitemap=False)
-    def cart_hook(self):
-        _logger.info(self)
-        return self
+    # @http.route(['/shop/cart'], type='http', auth="public", website=True, sitemap=False)
+    # def cart_hook:
+    # overriding the /shop/cart 
