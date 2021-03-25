@@ -21,9 +21,17 @@ class SubmissionTest(WebsiteForm):
 
         }
         request.env['sale.order'].sudo().create(data)
+        # sale.order ki sari required values chahiyae
         return ""
 
     @http.route(['/shop/cart/update'], type='http', auth="public", methods=['POST'], website=True)
     def cart_update(self, product_id, add_qty=1, set_qty=0, **kw):
         _logger.debug(kw)
         _logger.info(kw)
+
+    @http.route(['/shop/cart'], type='http', auth="public", website=True, sitemap=False)
+    def cart(self, access_token=None, revive='', **post):
+        _logger.debug("=====================================================")
+        _logger.info("=======================================================")
+        _logger.debug(post)
+        _logger.info(post)
