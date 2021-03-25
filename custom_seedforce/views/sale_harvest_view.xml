@@ -1,8 +1,6 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-
     <template id="sale_details_page" name="Sale Details">
     <t t-call="website.layout">
      <div class="oe_structure">
