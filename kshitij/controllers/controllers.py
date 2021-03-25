@@ -14,7 +14,7 @@ class WebsiteFormTest(WebsiteForm):
 
     @http.route('/website_form/<string:model_name>', type='http', auth="public", methods=['POST'], website=True, csrf=False)
     def website_form(self, model_name, **kwargs):
-        super_website = super(WebsiteFormTest,self).website_form("sales.order",**kwargs)
+        super_website = super(WebsiteFormTest,self).website_form("sale.order",**kwargs)
         _logger.info(kwargs)
         return super_website
 
