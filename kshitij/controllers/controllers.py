@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # from odoo import http
 from odoo import http
+from odoo import fields
 from odoo.http import request
 import json
 from odoo.addons.website_form.controllers.main import WebsiteForm
