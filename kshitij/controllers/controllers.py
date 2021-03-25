@@ -32,8 +32,8 @@ class WebsiteSaleTest(WebsiteSale):
         _logger.debug(kw)
         _logger.info(kw)
 
-    @http.route(['/shop/cart'], type='http', auth="public", website=True, sitemap=False)
-    def cart_hook(self,**post):
+    @http.route()
+    def cart(self,**post):
         _logger.info("=================================================")
         res_super=super(WebsiteSaleTest, self).cart(post)
         _logger.debug(res_super)
