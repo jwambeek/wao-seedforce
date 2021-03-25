@@ -28,6 +28,7 @@ class WebsiteSaleTest(WebsiteSale):
         sup=super(WebsiteSaleTest,self).checkout()
         _logger.info("==========")
         _logger.info(post)
+        _logger.info(sup)
         _logger.info("==============================")
         return sup
 
