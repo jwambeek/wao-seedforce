@@ -27,9 +27,7 @@ class WebsiteSaleTest(WebsiteSale):
     def checkout(self, **post):
         sup=super(WebsiteSaleTest,self).checkout()
         _logger.info("==========")
-        _logger.debug("{0} == {1}",sup,post)
-        _logger.debug(sup)
-        _logger.debug(post)
+        _logger.info(post)
         _logger.info("==============================")
         return sup
 
