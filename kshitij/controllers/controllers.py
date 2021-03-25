@@ -25,7 +25,7 @@ class WebsiteFormTest(WebsiteForm):
 class WebsiteSaleTest(WebsiteSale):
     @http.route()
     def checkout(self, **post):
-        sup=super(WebsiteSaleTest,self).checkout(post)
+        sup=super(WebsiteSaleTest,self).checkout()
         _logger.info("==========")
         _logger.debug("{0} == {1}",sup,post)
         _logger.debug(sup)
