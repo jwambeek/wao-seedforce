@@ -22,17 +22,17 @@ class WebsiteFormTest(WebsiteForm):
         # sale.order ki sari required values
         return ""
 
-class WebsiteSaleTest(WebsiteSale):
-    @http.route()
-    def checkout(self, **post):
-        sup=super(WebsiteSaleTest,self).checkout()
-        _logger.info("==========")
-        _logger.info(post)
-        _logger.info("==============================")
-        return sup
-
-    @http.route()
-    def cart(self):
-        res_super=super(WebsiteSaleTest, self).cart()
-        return res_super
+# class WebsiteSaleTest(WebsiteSale):
+#     @http.route()
+#     def checkout(self, **post):
+#         sup=super(WebsiteSaleTest,self).checkout()
+#         _logger.info("==========")
+#         _logger.info(post)
+#         _logger.info("==============================")
+#         return sup
+#
+#     @http.route()
+#     def cart(self):
+#         res_super=super(WebsiteSaleTest, self).cart()
+#         return res_super
 
