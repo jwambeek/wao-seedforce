@@ -32,4 +32,5 @@ class SubmissionTest(WebsiteForm):
 
     @http.route(['/shop/cart'], type='http', auth="public", website=True, sitemap=False)
     def cart_hook(self):
-        _logger.info("=================================================")
+        _logger.info(self)
+        return self
