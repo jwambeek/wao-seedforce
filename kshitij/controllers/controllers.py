@@ -14,13 +14,9 @@ class WebsiteFormTest(WebsiteForm):
 
     @http.route('/website_form/<string:model_name>', type='http', auth="public", methods=['POST'], website=True, csrf=False)
     def website_form(self, model_name, **kwargs):
-        data = {
-            "x_studio_opening_balance_so":1000,
-
-        }
-        request.env['sale.order'].sudo().create(data)
-        # sale.order ki sari required values
-        return ""
+        super_website = super(WebsiteFormTest,self).website_form(**kwargs)
+        _logger.info(super_website)
+        return super_website
 
 class WebsiteSaleTest(WebsiteSale):
     @http.route()
