@@ -34,6 +34,12 @@ class WebsiteSaleTest(WebsiteSale):
         return res_super
 
     @http.route()
+    def cart_update_json(self, product_id, line_id=None, add_qty=None, set_qty=None, display=True):
+        updated_cart = super(WebsiteSaleTest,self).cart_update_json(product_id, line_id=None, add_qty=None, set_qty=None, display=True)
+        _logger.info(product_id,line_id,add_qty,set_qty)
+        return updated_cart
+
+    @http.route()
     def confirm_order(self, **post):
         confirm_order_hook = super(WebsiteSaleTest,self).confirm_order(**post)
         
