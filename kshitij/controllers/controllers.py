@@ -35,7 +35,7 @@ class WebsiteSaleTest(WebsiteSale):
 
     @http.route()
     def cart_update_json(self, product_id, line_id=None, add_qty=None, set_qty=None, display=True):
-        updated_cart = super(WebsiteSaleTest,self).cart_update_json(product_id, line_id=None, add_qty=None, set_qty=None, display=True)
+        updated_cart = super(WebsiteSaleTest,self).cart_update_json(product_id, line_id, add_qty, set_qty)
         _logger.info(product_id,line_id,add_qty,set_qty)
         return updated_cart
 
