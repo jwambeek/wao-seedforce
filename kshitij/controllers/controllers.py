@@ -2,6 +2,7 @@ from odoo import http
 from odoo.addons.website_form.controllers.main import WebsiteForm
 from odoo.addons.website_sale.controllers.main import WebsiteSale
 import logging
+from odoo.http import request
 
 _logger = logging.getLogger(__name__)
 
