@@ -33,10 +33,11 @@ class WebsiteSaleTest(WebsiteSale):
         return sup
 
     @http.route()
-    def cart(self):
-        res_super=super(WebsiteSaleTest, self).cart()
+    def cart(self, access_token=None, revive='', **post):
+        res_super=super(WebsiteSaleTest, self).cart(**post)
         order = request.website.sale_get_order()
         _logger.info(order)
+        _logger.info(post)
         return res_super
 
     # this function works in updating the cart and store the values to the db
