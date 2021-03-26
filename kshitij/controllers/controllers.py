@@ -14,13 +14,14 @@ class WebsiteFormTest(WebsiteForm):
     @http.route('/website_form/<string:model_name>', type='http', auth="public", methods=['POST'], website=True, csrf=False)
     def website_form(self, model_name, **kwargs):
         super_website = super(WebsiteFormTest,self).website_form("res.partner",**kwargs)
+        
         _logger.info(kwargs)
         return super_website
 
 class WebsiteSaleTest(WebsiteSale):
     @http.route()
     def checkout(self, **post):
-        sup=super(WebsiteSaleTest,self).checkout()
+        sup=super(WebsiteSaleTest,self).checkout(**post)
         _logger.info("==========")
         _logger.info(post)
         _logger.info(sup)
@@ -31,3 +32,9 @@ class WebsiteSaleTest(WebsiteSale):
     def cart(self):
         res_super=super(WebsiteSaleTest, self).cart()
         return res_super
+
+    @http.route()
+    def confirm_order(self, **post):
+        confirm_order_hook = super(WebsiteSaleTest,self).confirm_order(**post)
+        
+        return confirm_order_hook
