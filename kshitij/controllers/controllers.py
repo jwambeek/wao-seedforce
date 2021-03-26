@@ -17,6 +17,7 @@ class WebsiteFormTest(WebsiteForm):
         super_website = super(WebsiteFormTest,self).website_form("res.partner",**kwargs)
         _logger.info(self)
         _logger.info(kwargs)
+        
         return super_website
 
 class WebsiteSaleTest(WebsiteSale):
@@ -33,6 +34,8 @@ class WebsiteSaleTest(WebsiteSale):
     @http.route()
     def cart(self):
         res_super=super(WebsiteSaleTest, self).cart()
+        order = request.website.sale_get_order()
+        _logger.info(order)
         return res_super
 
     # this function works in updating the cart and store the values to the db
@@ -49,5 +52,5 @@ class WebsiteSaleTest(WebsiteSale):
     @http.route()
     def confirm_order(self, **post):
         confirm_order_hook = super(WebsiteSaleTest,self).confirm_order(**post)
-        
+
         return confirm_order_hook
