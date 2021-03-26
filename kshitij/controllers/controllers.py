@@ -15,7 +15,7 @@ class WebsiteFormTest(WebsiteForm):
     def website_form(self, model_name, **kwargs):
         """ this function captures the value of the harvest declaration form. kwargs contains all the values of the form"""
         super_website = super(WebsiteFormTest,self).website_form("res.partner",**kwargs)
-        
+        _logger.info(self)
         _logger.info(kwargs)
         return super_website
 
