@@ -14,8 +14,11 @@
     ],    
      'data': [
         #'views/website_form.xml',
-        'views/test_form.xml',
-        'views/sale_harvest_view.xml',
+        #'views/test_form.xml',
+        #'views/sale_harvest_view.xml',
+        'views/signup_template.xml',
+        
+        
 
 
     ],
