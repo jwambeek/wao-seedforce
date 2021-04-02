@@ -3,7 +3,7 @@
     
 
     <template id="signup_form" inherit_id="auth_signup.fields">
-    <xpath expr="//div[@class='form-group field-name']" position='replace'>
+    <xpath expr="//div[@class='form-group field-name']" position='after'>
 
             <div class="form-group field-ngr">
                 <label for="name">NGR Number</label>
