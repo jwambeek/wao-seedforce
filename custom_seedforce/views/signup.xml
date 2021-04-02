@@ -24,12 +24,27 @@
                     t-att-autofocus="'autofocus' if login and not only_passwords else None" />
             </div>
 
+            <div class="form-group field-trading">
+                <label for="name">Trading Name</label>
+                <input type="text" name="x_studio_trading_name" t-att-value="x_studio_trading_name" id="x_studio_trading_name" class="form-control form-control-sm"
+                    required="required" t-att-readonly="'readonly' if only_passwords else None"
+                    t-att-autofocus="'autofocus' if login and not only_passwords else None" />
+            </div>
+
             <div class="form-group">
-                <label for="name">Address</label>
+                <label for="name">NGR Number</label>
                 <input type="text" name="x_studio_ngr_number" t-att-value="x_studio_ngr_number" id="x_studio_ngr_number" class="form-control form-control-sm"
                     required="required" t-att-readonly="'readonly' if only_passwords else None"
                     t-att-autofocus="'autofocus' if login and not only_passwords else None" />
             </div>
+
+            <div class="form-group field-abn">
+                <label for="name">ABN</label>
+                <input type="text" name="vat" t-att-value="vat" id="vat" class="form-control form-control-sm"
+                    required="required" t-att-readonly="'readonly' if only_passwords else None"
+                    t-att-autofocus="'autofocus' if login and not only_passwords else None" />
+            </div>
+
 
             <div class="form-group field-password pt-2">
                 <label for="password">Password</label>
