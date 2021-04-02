@@ -10,7 +10,8 @@ import logging
 
 _logger = logging.getLogger(__name__)
 
-class SignUpForm(Home):
+#class SignUpForm(Home):
+class AuthSignupHome(Home):
     def do_signup(self, qcontext):
         """ Shared helper that creates a res.partner out of a token """
         values = { key: qcontext.get(key) for key in ('login', 'name','x_studio_ngr_number', 'password') }
