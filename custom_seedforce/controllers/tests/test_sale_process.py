@@ -8,7 +8,7 @@ from odoo.addons.website.tools import MockRequest
 
 
 @odoo.tests.tagged('post_install', '-at_install')
-class TestWebsiteSaleCheckoutAddress(TransactionCaseWithUserDemo):
+class TestWebsiteSaleCheckoutAddress1(TransactionCaseWithUserDemo):
     ''' The goal of this method class is to test the address management on
         the checkout (new/edit billing/shipping, company_id, website_id..).
     '''
