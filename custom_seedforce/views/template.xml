@@ -6,7 +6,7 @@
         <xpath expr="//div[@id='shipping_and_billing']" position="after">
               <t t-call="website.layout">
             <div class="container">
-                Hey Subscribe the channel .. !
+                May we meet again .. !
      
             </div>
         </t>
