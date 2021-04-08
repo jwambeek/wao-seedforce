@@ -1,6 +1,6 @@
 {
     'name' : 'SeedForce',
-    'version': '4.1',
+    'version': '4.2',
     'Summary': '',
     'description': 'Pass the field value into sale order',
     'license': 'LGPL-3',
@@ -14,6 +14,7 @@
     ],    
      'data': [
         'views/signup.xml',
+        'views/saleorder_view.xml'
 
 
     ],

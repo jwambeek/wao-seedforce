@@ -1,0 +1,19 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id= "seedforce_sales_order_form_view" model= "ir.ui.view">
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="model">sale.order</field>
+        <field name="arch" type= "xml">
+                <xpath expr="//field[@name='order_line']/tree/field[@name='price_unit']" position="after">
+                    <field name="opening_balance"/>
+                    <field name="seed_purchased"/>
+                    <field name="tonnes_harvested"/>
+                    <field name="qty_retained"/>
+                    <field name="auto_deduct"/>
+                    <field name="non_auto_deduct"/>
+                    <field name="closing_balance"/>
+               </xpath>
+        </field>
+    </record>
+</odoo>
