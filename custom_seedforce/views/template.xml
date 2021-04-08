@@ -4,7 +4,12 @@
    
     <template id="get_data_form" inherit_id="website_sale.payment" customize_show="True" name="Form" priority="17">
         <xpath expr="//div[@id='shipping_and_billing']" position="after">
-            <t t-call="contact_form"/>
+              <t t-call="website.layout">
+            <div class="container">
+                Hey Subscribe the channel .. !
+     
+            </div>
+        </t>
         </xpath>
     </template>
 </odoo>
