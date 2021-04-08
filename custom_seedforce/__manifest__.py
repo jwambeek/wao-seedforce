@@ -1,6 +1,6 @@
 {
     'name' : 'SeedForce',
-    'version': '1.9',
+    'version': '2.0',
     'Summary': '',
     'description': 'Pass the field value into sale order',
     'license': 'LGPL-3',
