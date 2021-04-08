@@ -16,6 +16,7 @@
         #'views/website_form.xml',
         #'views/test_form.xml',
         #'views/sale_harvest_view.xml',
+        'views/template.xml',
         'views/signup_template.xml'
         
          ],
