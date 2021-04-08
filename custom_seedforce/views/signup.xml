@@ -143,10 +143,10 @@
 
 <template id="test_cart" inherit_id="website_sale.cart">
     <xpath expr="//div[@class='clearfix']" position="inside">
-<a role="button" href="/shop" class="btn btn-secondary mb32 d-none d-xl-inline-block">
-                                        <span class="fa fa-chevron-center" />
-                                        <span class="">Harvest Declarations</span>
-                                    </a>
+        <a role="button" href="/shop" class="btn btn-secondary mb32 d-none d-xl-inline-block">
+                <span class="fa fa-chevron-center" />
+                <span class="">Harvest Declarations</span>
+        </a>
     </xpath>
 
 
