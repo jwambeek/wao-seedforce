@@ -1,7 +1,15 @@
 from odoo import http
 from odoo.http import request
 
-class WebsiteSale(http.Controller):
-    @http.route('/shop/cart', type='http', auth="public", website=True)
-    def get_data(self, **kw):
-        return "world!"
+class RecentlyPurchased(http.Controller):
+     @http.route('/shop/payment',website=True, auth='public')
+     def index(self, **kw):
+         return "Hello, world"
+        #return request.render("recently_purchased.test_page" , {})
+
+
+
+
+		
+
+
