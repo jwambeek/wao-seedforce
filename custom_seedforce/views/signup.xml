@@ -149,9 +149,7 @@
                                     </a>
     </xpath>
 
-        <xpath expr="//div[@class='mb16 table table-striped table-sm js_cart_lines']" position="inside">
-        <th class="td-opening">Opening Balance</th>
-        </xpath>
+
 </template>
 
 
