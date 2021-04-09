@@ -7,8 +7,8 @@ class WebsiteSelData(WebsiteSale):
      def payment(self, **post):
      	res = super(WebsiteSelData,self).payment(self, **post)
      	print("odoo", res)
-     	#return res
-     	return request.render("custom_seedforce.get_data_form" , {})
+     	return res
+     	#return request.render("custom_seedforce.get_data_form" , {})
 
 #class GetData(http.Controller):
  #    @http.route('/shop/payment', type='http', website=True, auth='public')
