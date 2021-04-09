@@ -2,8 +2,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
    
-    <template id="get_data_form" inherit_id="website_sale.wizard_checkout"  name = "Test Form">
-        <xpath expr="//div[@id='wizard-step10]" position="after">
+    <template id="get_data_form" inherit_id="website_sale.payment"  name = "Test Form">
+       <xpath expr="//div[@id='payment_method'][hasclass('js_payment')]" position="replace">
               
              <div class="container">
 
