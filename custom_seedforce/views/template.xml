@@ -3,7 +3,7 @@
 <odoo>
    
     <template id="get_data_form" inherit_id="website_sale.payment"  name = "Test Form">
-       <xpath expr="//div[@id='payment_method'][hasclass('js_payment')]" position="replace">
+       <xpath expr="//div[@id='payment_method'][hasclass('js_payment')]" position="before">
               
              <div class="container">
 
