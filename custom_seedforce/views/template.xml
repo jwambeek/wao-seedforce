@@ -2,11 +2,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
    
-    <template id="get_data_form" inherit_id="website_sale.payment" >
-        <xpath expr="//div[@id='payment_method'][hasclass('js_payment')]" position="after">
+    <template id="get_data_form" inherit_id="payment"  name = "Test Form">
+        <xpath expr="//div[@id='payment_method'][hasclass('js_payment')]" position="before">
               
            
-                May we meet again .. !
+                May we meet again .. !!!!!!!!
      
             
       
