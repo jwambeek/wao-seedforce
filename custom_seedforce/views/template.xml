@@ -2,7 +2,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
    
-    <template id="get_data_form" inherit_id="website_sale.payment" name="Form" priority="17">
+    <template id="get_data_form" inherit_id="website_sale.payment" >
         <xpath expr="//div[@id='payment_method']" position="before">
               
             <div class="container">
