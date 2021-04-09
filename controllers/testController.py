@@ -1,5 +1,13 @@
-#from odoo import http
-#from odoo.http import request
+from odoo import http
+from odoo.http import request
+from odoo.addons.website_sale.controllers.main import WebsiteSale 
+
+class WebsiteSelData(WebsiteSale):
+	 @http.route(['/shop/payment'], type='http', auth="public", website=True, sitemap=False)
+     def payment(self, **post):
+     	res = super(WebsiteSelData,self).payment(self, **post)
+     	print("odoo", res)
+     	return res
 
 #class GetData(http.Controller):
  #    @http.route('/shop/payment', type='http', website=True, auth='public')
