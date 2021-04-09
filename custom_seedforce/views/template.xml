@@ -3,7 +3,7 @@
 <odoo>
    
     <template id="get_data_form" inherit_id="website_sale.payment" customize_show="True" name="Form" priority="17">
-        <xpath expr="//div[@id='shipping_and_billing']" position="after">
+        <xpath expr="//div[hasclass('cart')]" position="after">
               
             <div class="container">
                 May we meet again .. !
