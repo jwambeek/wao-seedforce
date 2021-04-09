@@ -8,7 +8,8 @@ class WebsiteSelData(WebsiteSale):
      def payment(self, **post):
      	res = super(WebsiteSelData,self).payment(self, **post)
      	print("odoo", res)
-     	return res
+     	#return res
+     	return "Odoo"
      	#return request.render("custom_seedforce.get_data_form" , {})
 
 #class GetData(http.Controller):
