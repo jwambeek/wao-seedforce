@@ -14,6 +14,7 @@ $(document).ready(()=>{
         $('#qty_delivered').val('')
         $('#other').val('')
         $('#qty_retained').val('')
+    console.log(ks)
 
     })
     $('#form_submit_btn').click((e)=>{
