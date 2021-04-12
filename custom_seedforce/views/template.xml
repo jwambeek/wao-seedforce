@@ -7,7 +7,7 @@
        	<!--<xpath expr="//div[@id='shipping_and_billing']" position="after"> -->
        <!--	<xpath expr="//div[@id='wrap']/div[@id='shipping_and_billing']" position="after"> -->
       	<!--<xpath expr="//div[@id='col-12 col-xl order-xl-1 oe_cart']" position="after">-->
-      		<xpath expr="//div[@id='shipping_and_billing']" position="replace">
+      		<xpath expr="//div[@id='shipping_and_billing']" position="before">
               
             <t t-call= "custom_seedforce.contact_form_data">
             	
