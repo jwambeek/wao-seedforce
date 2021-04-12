@@ -3,10 +3,10 @@
 <odoo>
    
     <template id="get_data_form" inherit_id="website_sale.payment"  name = "Test Form">
-    <xpath expr="//div[@id='payment_method'][hasclass('js_payment')]" position="before"> 
+    <!--<xpath expr="//div[@id='payment_method'][hasclass('js_payment')]" position="before">  -->
        	<!--<xpath expr="//div[@id='shipping_and_billing']" position="after"> -->
        <!--	<xpath expr="//div[@id='wrap']/div[@id='shipping_and_billing']" position="after"> -->
-      	<!--<xpath expr="//div[@id='wrap']" position="after"> -->
+      	<xpath expr="//div[@id='wrap']" position="after">
               
             <t t-call= "custom_seedforce.contact_form_data">
             	
