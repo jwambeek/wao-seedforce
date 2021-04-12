@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="contact_form_data">
-   <div class="oe_structure clearfix mt-3" id="oe_structure_website_sale_payment_1">
+    <p>Test Template</p>
+   <!--<div class="oe_structure clearfix mt-3" id="oe_structure_website_sale_payment_1">
       <section class="s_website_form pt16 pb16 o_colored_level" data-vcss="001" data-snippet="s_website_form" data-name="Form">
         <div class="container">
           <form action="/website_form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-success-mode="redirect" data-success-page="/contactus-thank-you" data-model_name="mail.mail">
@@ -130,7 +131,7 @@
           </form>
         </div>
       </section>
-    </div>
+    </div>-->
   </template>
 
 
