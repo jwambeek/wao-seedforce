@@ -2,7 +2,7 @@ $(document).ready(()=>{
     console.log("ready")
     let ks;
     let json_array=[];
-    $('.kshitij').click((e)=>{
+    $('.cart_values').click((e)=>{
         let el = $(e.currentTarget).closest('tr')
         console.log(el)
         ks=el;

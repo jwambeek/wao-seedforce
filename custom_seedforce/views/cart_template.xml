@@ -78,8 +78,8 @@
                 <tbody>
                     <t t-foreach="website_sale_order.website_order_line" t-as="line">
                         <tr>
-                            <td class="btn kshitij" data-toggle="modal" data-target="#myModal">
-                                <we-button class="fa fa-edit kshitij"/>
+                            <td class="btn cart_values" data-toggle="modal" data-target="#myModal">
+                                <we-button class="fa fa-edit cart_values"/>
                             </td>
                             <td id='product_name'>
                                 <strong t-field="line.name_short"/>
