@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
+    <template id="contact_form_data">
+    <p>Test Template</p>
+    </template>
    
     <template id="get_data_form" inherit_id="website_sale.payment" >
     <!--<xpath expr="//div[@id='payment_method'][hasclass('js_payment')]" position="before">  -->
