@@ -8,10 +8,10 @@
       	<!--<xpath expr="//div[@id='col-12 col-xl order-xl-1 oe_cart']" position="after">-->
       		<xpath expr="//div[@id='shipping_and_billing']" position="after">
               
-         <!--   <t t-call= "custom_seedforce.contact_form_data">
+          <t t-call= "custom_seedforce.contact_form_data">
             	
-            </t> -->
-            <p>Test Template</p>
+            </t> 
+            <!--<p>Test Template</p>-->
    
  
 
