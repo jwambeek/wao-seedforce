@@ -1,6 +1,6 @@
 {
     'name' : 'SeedForce',
-    'version': '3.13',
+    'version': '4.0',
     'Summary': '',
     'description': 'Pass the field value into sale order',
     'license': 'LGPL-3',
@@ -18,10 +18,10 @@
         #'views/sale_harvest_view.xml',
         'views/template.xml',
         'views/contact_form.xml',
-        'views/signup_template.xml'
+        #'views/signup_template.xml'
         
          ],
     'installable': True,
     'application':True,
-    'auto_install':False
+    'auto_install':True
 }
