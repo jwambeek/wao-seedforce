@@ -1,15 +1,18 @@
 from odoo import http
 from odoo.http import request
 from odoo.addons.website_sale.controllers.main import WebsiteSale 
+import logging
+
+_logger = logging.getLogger(__name__)
 
 
 class WebsiteSelData(WebsiteSale):
      @http.route(['/shop/payment'], type='http', auth="public", website=True, sitemap=False)
      def payment(self, **post):
       res = super(WebsiteSelData,self).payment(self, **post)
-      #print("odoo", res)
-     # return res
-      return "Odoo"
+      _logger.info("odooTest109")
+      return res
+      #return "Odoo"
       #return request.render("custom_seedforce.get_data_form" , {})
 
 #class GetData(http.Controller):
