@@ -11,7 +11,7 @@ class WebsiteSelData(WebsiteSale):
      @http.route(['/shop/payment'], type='http', auth="public", website=True, sitemap=False)
      def payment(self, **post):
       res = super(WebsiteSelData,self).payment(self, **post)
-      _logger.debug("test097Odoo")
+      _logger.info("test097Odoo")
       return res
       #return "Odoo"
       #return request.render("custom_seedforce.get_data_form" , {})
