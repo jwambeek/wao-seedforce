@@ -9,8 +9,8 @@ class WebsiteSelData(WebsiteSale):
       res = super(WebsiteSelData,self).payment(self, **post)
       #print("odoo", res)
      # return res
-     #  return "Odoo"
-      return request.render("custom_seedforce.get_data_form" , {})
+      return "Odoo"
+      #return request.render("custom_seedforce.get_data_form" , {})
 
 #class GetData(http.Controller):
  #    @http.route('/shop/payment', type='http', website=True, auth='public')
