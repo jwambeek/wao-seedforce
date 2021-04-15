@@ -7,10 +7,10 @@ from odoo.addons.website_sale.controllers.main import WebsiteSale
 _logger = logging.getLogger(__name__)
 
 
-class WebsiteSelData(WebsiteSale):
+class WebsiteSaleData(WebsiteSale):
      @http.route(['/shop/payment'], type='http', auth="public", website=True, sitemap=False)
      def payment(self, **post):
-      res = super(WebsiteSelData,self).payment(self, **post)
+      res = super(WebsiteSaleData,self).payment(**post)
       _logger.info("Test String")
       return "testTheMethod"
       #return "Odoo"
